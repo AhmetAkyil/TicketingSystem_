@@ -1,0 +1,14 @@
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.db
+*.DS_Store
+appsettings.json
+appsettings.Development.jsonappsettings.json
+appsettings.Development.json
+*.mdf
+*.ldf
+*.zip
+*.rar
