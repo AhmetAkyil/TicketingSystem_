@@ -94,9 +94,10 @@ The goal is to **show how vulnerabilities work, their risks, and how to fix them
 ### CommentsController
 [`Controllers/CommentsController.cs`](TicketSystem/Controllers/CommentsController.cs)
 
-- **`Create`** – adds comment (CSRF-protected).
+- **`Add`** – adds comment (CSRF-protected).
 - **`Delete`** – deletes comment (CSRF-protected).
-
+- **`Edit`** - edit comment
+  
 ### HomeController
 [`Controllers/HomeController.cs`](TicketSystem/Controllers/HomeController.cs)
 
