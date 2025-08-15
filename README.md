@@ -60,9 +60,6 @@ The goal is to **show how vulnerabilities work, their risks, and how to fix them
 - **Comment** – per-ticket comments with timestamps and author.  
   [`Models/Comment.cs`](TicketSystem/Models/Comment.cs)
 
-- **UserInsecure** – simplified “demo only” user table for SQLi example.  
-  [`Models/UserInsecure.cs`](TicketSystem/Models/UserInsecure.cs)
-
 - **AppDbContext** – EF Core `DbContext` (DbSets, relationships).  
   [`Data/AppDbContext.cs`](TicketSystem/Data/AppDbContext.cs)
 
