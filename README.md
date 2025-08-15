@@ -32,26 +32,26 @@ Root: `TicketSystem/` → app code lives under this folder in your repo.
 ## Entities (short + links)
 
 - **User** – minimal user record (Email, Password, Role).  
-  [`Models/User.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Models/User.cs)
+  [`Models/User.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Models/User.cs)
 
 - **Ticket** – title, description, status + creator/assignee relations.  
-  [`Models/Ticket.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Models/Ticket.cs)
+  [`Models/Ticket.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Models/Ticket.cs)
 
 - **Comment** – per-ticket comments with timestamps and author.  
-  [`Models/Comment.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Models/Comment.cs)
+  [`Models/Comment.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Models/Comment.cs)
 
 - **UserInsecure** – simplified “demo only” user table for SQLi example.  
-  [`Models/UserInsecure.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Models/UserInsecure.cs)
+  [`Models/UserInsecure.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Models/UserInsecure.cs)
 
 - **AppDbContext** – EF Core `DbContext` (DbSets, relationships).  
-  [`Data/AppDbContext.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Data/AppDbContext.cs)
+  [`Data/AppDbContext.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Data/AppDbContext.cs)
 
 ---
 
 ## Controllers (methods + purpose)
 
 ### AuthController
-[`Controllers/AuthController.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Controllers/AuthController.cs)
+[`Controllers/AuthController.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Controllers/AuthController.cs)
 
 - **`GET /auth/login` → `LoginForm()`** – serves login view, injects reCAPTCHA site key.
 - **`POST /auth/login` – SECURE** – EF LINQ query (parameterized → no SQLi), Google reCAPTCHA verification, rate limiting via `[EnableRateLimiting("LoginPolicy")]`, stores session info.
@@ -66,7 +66,7 @@ Root: `TicketSystem/` → app code lives under this folder in your repo.
 - **`CreateAuto()`** – demo helper: generates a random user/password.
 
 ### TicketsController
-[`Controllers/TicketsController.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Controllers/TicketsController.cs)
+[`Controllers/TicketsController.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Controllers/TicketsController.cs)
 
 - **`Index()`** – lists tickets with related users.
 - **`Details(id)`** – shows ticket details.
@@ -75,13 +75,13 @@ Root: `TicketSystem/` → app code lives under this folder in your repo.
 - **`Edit(...)` / `Delete(...)` –** CSRF-protected, updates or removes tickets.
 
 ### CommentsController
-[`Controllers/CommentsController.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Controllers/CommentsController.cs)
+[`Controllers/CommentsController.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Controllers/CommentsController.cs)
 
 - **`Create`** – adds comment (CSRF-protected).
 - **`Delete`** – deletes comment (CSRF-protected).
 
 ### HomeController
-[`Controllers/HomeController.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Controllers/HomeController.cs)
+[`Controllers/HomeController.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Controllers/HomeController.cs)
 
 - Landing, navigation; example of safe JSON embedding in Razor.
 
@@ -90,13 +90,13 @@ Root: `TicketSystem/` → app code lives under this folder in your repo.
 ## Services
 
 - **RecaptchaService** – verifies Google reCAPTCHA tokens via HTTP call.  
-  [`Services/RecaptchaService.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Services/RecaptchaService.cs)
+  [`Services/RecaptchaService.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Services/RecaptchaService.cs)
 
 - **AccountCreationService** – generates random users/passwords for demo.  
-  [`Services/AccountCreationService.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Services/AccountCreationService.cs)
+  [`Services/AccountCreationService.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Services/AccountCreationService.cs)
 
 - **Rate Limiting** – configured in `Program.cs`, applied to secure login with `[EnableRateLimiting("LoginPolicy")]`.  
-  [`Program.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Program.cs)
+  [`Program.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Program.cs)
 
 ---
 
