@@ -49,7 +49,7 @@ The goal is to **show how vulnerabilities work, their risks, and how to fix them
 
 ---
 
-## Entities (short + links)
+## Entities 
 
 - **User** – minimal user record (Email, Password, Role).  
   [`Models/User.cs`](TicketSystem/Models/User.cs)
