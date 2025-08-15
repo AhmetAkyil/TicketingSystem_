@@ -60,7 +60,7 @@ Root: `TicketSystem/` → app code lives under this folder in your repo.
 - **`POST /auth/logout`** – clears session, redirects.
 
 ### UsersController
-[`Controllers/UsersController.cs`](https://github.com/AhmetAkyil/TicketingSystem/blob/main/TicketSystem/Controllers/UsersController.cs)
+[`Controllers/UsersController.cs`](https://github.com/AhmetAkyil/TicketingSystem_/blob/main/TicketSystem/Controllers/UsersController.cs)
 
 - Admin-only user list/create (manual role check via session).
 - **`CreateAuto()`** – demo helper: generates a random user/password.
